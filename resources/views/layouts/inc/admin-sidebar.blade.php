@@ -13,6 +13,12 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('admin.auth.index') }}" class="waves-effect">
+                        <i class='bx bxs-user-plus'></i>
+                        <span>Register user</span>
+                    </a>
+                </li>
                <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class='bx bx-buildings'></i>
@@ -89,8 +95,6 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('position.index') }}"> Position </span> </a></li>
                     </ul>
-                    
-
                 </li>
                 <li><a href="{{ route('all-cv') }}" class="waves-effect">
                         <i class='bx bxs-book'></i> <span> All CV </span></a>

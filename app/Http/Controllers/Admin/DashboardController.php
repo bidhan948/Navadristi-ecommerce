@@ -11,11 +11,12 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        // return "i am herer";
-        $service = Services::all();
-        $doctor = Doctors::all();
-        $totalService = count($service);
-        $totalDoctor = count($doctor);
-        return view('admin.dashboard', ['totalService' => $totalService, 'totalDoctor'=>$totalDoctor]);
+        return view(
+            'admin.dashboard',
+            [
+                'totalService' => Services::query()->count(),
+                'totalDoctor' => Doctors::query()->count()
+            ]
+        );
     }
 }

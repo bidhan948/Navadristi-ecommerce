@@ -53,6 +53,7 @@
               <i class="fa-regular fa-clock"></i>
             </div> -->
             <div class="info appointment">
+              <button class="my-2"><a href="{{ route('user.register') }}"> Register </a></button>
               <button><a href="{{ url('/appointment') }}"> Fix an Appointment </a></button>
             </div>
           </div>

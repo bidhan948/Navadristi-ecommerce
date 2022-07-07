@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\AuthController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Frontend\FrontendController;
@@ -59,11 +60,6 @@ Route::get('about', [FrontendController::class, 'about'])->name('about');
 Route::get('services', [FrontendController::class, 'service'])->name('services');
 Route::get('services/{title}', [FrontendController::class, 'serviceDetail'])->name('service-detail');
 
-
-// Message from
-// Route::get('message', [FrontendController::class, 'message'])->name('');
-// Route::get('/news/{id}', [FrontendController::class, 'newsDetail'])->name('news-detail');
-
 // News
 Route::get('news', [FrontendController::class, 'news'])->name('news-event');
 Route::get('/news/{id}', [FrontendController::class, 'newsDetail'])->name('news-detail');
@@ -107,6 +103,7 @@ Route::get('/subgallery/{id}', [FrontendController::class, 'subGallery'])->name(
 
 
 Route::prefix('admin')->middleware(['isAdmin'])->group(function () {
+
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::post('logout',[HomeController::class,'logout'])->name('logout');
     // About Info
