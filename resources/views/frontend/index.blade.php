@@ -4,8 +4,6 @@
 @include('inc.header')
 @include('inc.nav')
 
-{{-- content start  --}}
-
 <div id="banner">
     <div class="owl-carousel banner owl-theme">
        @foreach ($slider as $item)

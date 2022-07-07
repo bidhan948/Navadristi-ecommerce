@@ -36,6 +36,8 @@ Route::post('/login',function(Request $request){
         if($user != null){
             if(Hash::check($request->password,$user->password)){
                 $request->session()->put('is_logged_in',true);
+                $request->session()->put('role',$user->role);
+                $request->session()->put('id',$user->id);
                 return redirect()->route('admin.dashboard');
             }else{
                 return redirect()->back();

@@ -32,16 +32,21 @@
                             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
                                 <tr>
-                                    <th class="w-5">S.No.</th>
-                                    <th> Name</th>
-                                    <th> Description </th>
-                                    <th class="w-15">Action</th>
+                                    <th class="w-5" class="text-center">S.No.</th>
+                                    <th class="text-center"> Name</th>
+                                    <th class="text-center"> Email </th>
+                                    <th class="text-center"> Contact No. </th>
+                                    <th class="text-center"> Address </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($users as $key => $user)
                                     <tr>
                                         <td class="text-center">{{$key+1}}</td>
+                                        <td class="text-center">{{$user->name}}</td>
+                                        <td class="text-center">{{$user->email}}</td>
+                                        <td class="text-center">{{$user->contact_no}}</td>
+                                        <td class="text-center">{{$user->address}}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
