@@ -14,13 +14,14 @@ class PackageController extends Controller
     public function index(): View
     {
         return view('e_commerce.package.package', [
-            'packages' => package::query()->get()
+            'Parentpackages' => package::query()->whereNull('package_id')->get(),
+            'packages' => package::query()->with('Parent')->get()
         ]);
     }
 
     public function store(Request $request): RedirectResponse
     {
-        $attribute = $request->validate(['name' => 'required|unique:packages', 'description' => 'present']);
+        $attribute = $request->validate(['name' => 'required|unique:packages', 'description' => 'present','package_id' => 'present']);
         package::create($attribute);
         toast("package added successfully", "success");
         return redirect()->back();
@@ -31,7 +32,8 @@ class PackageController extends Controller
         $attribute = $request->validate(
             [
                 'name' => ['required', Rule::unique('packages')->ignore($package)],
-                'description' => 'present'
+                'description' => 'present',
+                'package_id' => 'present'
             ]
         );
 

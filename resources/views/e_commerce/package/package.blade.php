@@ -57,6 +57,25 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
+                                                        <label> Package Name</label>
+                                                        <div>
+                                                            <select name="package_id" id="package_id" class="form-control">
+                                                                <option value="">{{ __('--Please Select--') }}
+                                                                </option>
+                                                                @foreach ($Parentpackages as $parentPackage)
+                                                                    <option value="{{ $parentPackage->id }}">
+                                                                        {{ $parentPackage->name }}
+                                                                    </option>
+                                                                @endforeach
+                                                            </select>
+                                                            @error('package_id')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong>{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
                                                         <label>Description</label>
                                                         <div>
                                                             <textarea name="description" id="summernote1" rows="10" class="form-control"></textarea>
@@ -109,13 +128,11 @@
                                     <th class="w-15">Action</th>
                                 </tr>
                             </thead>
-
-
                             <tbody>
                                 @foreach ($packages as $key => $package)
                                     <tr>
                                         <td> {{ $key + 1 }}</td>
-                                        <td>{{ $package->name }}</td>
+                                        <td>{{ $package->name . ($package->Parent == null ? '' : '( '. $package->Parent->name.' )')}}</td>
                                         <td>{!! $package->description ?? '--' !!}</td>
                                         <td><a href="#" type="button"
                                                 class="btn btn-primary btn-rounded waves-effect waves-light mb-2 mr-2"
@@ -138,7 +155,8 @@
                                                 </div>
                                                 <div class="modal-body view-info">
                                                     <div class="row">
-                                                        <form action="{{ route('admin.package.update',$package) }}" method="post">
+                                                        <form action="{{ route('admin.package.update', $package) }}"
+                                                            method="post">
                                                             @csrf
                                                             @method('PUT')
                                                             <div class="col-lg-12">
@@ -164,9 +182,33 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="form-group">
+                                                                                    <label> Package Name</label>
+                                                                                    <div>
+                                                                                        <select name="package_id"
+                                                                                            id="package_id"
+                                                                                            class="form-control">
+                                                                                            <option value="">
+                                                                                                {{ __('--Please Select--') }}
+                                                                                            </option>
+                                                                                            @foreach ($Parentpackages as $Parentpackage)
+                                                                                                <option
+                                                                                                    value="{{ $Parentpackage->id }}" {{$Parentpackage->id == $package->package_id ? 'selected' : ''}}>
+                                                                                                    {{ $Parentpackage->name }}
+                                                                                                </option>
+                                                                                            @endforeach
+                                                                                        </select>
+                                                                                        @error('package_id')
+                                                                                            <span class="invalid-feedback"
+                                                                                                role="alert">
+                                                                                                <strong>{{ $message }}</strong>
+                                                                                            </span>
+                                                                                        @enderror
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group">
                                                                                     <label>Description</label>
                                                                                     <div>
-                                                                                        <textarea name="description" id="summernote{{$package->id+1}}" rows="10" class="form-control">{!! $package->description !!}</textarea>
+                                                                                        <textarea name="description" id="summernote{{ $package->id + 1 }}" rows="10" class="form-control">{!! $package->description !!}</textarea>
                                                                                         @error('description')
                                                                                             <span class="invalid-feedback"
                                                                                                 role="alert">
