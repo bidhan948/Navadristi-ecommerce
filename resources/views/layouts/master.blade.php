@@ -23,6 +23,7 @@
     <link href="{{ asset('assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
 </head>
 <body data-sidebar="dark">
+    @include('sweetalert::alert')
     {{-- Include Loading --}}
     @include('layouts.inc.loading');
 
