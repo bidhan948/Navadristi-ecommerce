@@ -66,4 +66,9 @@ class PackageController extends Controller
         toast("Package detail added successfully", 'success');
         return redirect()->back();
     }
+
+    public function packageList(): View
+    {
+        return view('e_commerce.package.package-list');
+    }
 }

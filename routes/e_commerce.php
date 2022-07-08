@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('user/register',[AuthController::class,'register'])->name('user.register');
 Route::post('user/register',[AuthController::class,'registerSubmit'])->name('user.registerSubmit');
+Route::get('package-list',[PackageController::class,'packageList'])->name('package.list');
 
 Route::prefix('admin')->middleware(['Role'])->group(function () {
     // Route for e-commerce
