@@ -26,6 +26,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('admin.package.index') }}"> Package </span> </a></li>
+                        <li><a href="{{ route('admin.package_detail.index') }}"> Package Detail</span> </a></li>
                     </ul>
                 </li>
                <li>

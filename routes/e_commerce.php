@@ -15,4 +15,6 @@ Route::prefix('admin')->middleware(['Role'])->group(function () {
     Route::get('/package', [PackageController::class, 'index'])->name('admin.package.index');
     Route::post('/package', [PackageController::class, 'store'])->name('admin.package.store');
     Route::put('/package/{package}', [PackageController::class, 'update'])->name('admin.package.update');
+    Route::get('/package-detail', [PackageController::class, 'detailIndex'])->name('admin.package_detail.index');
+    Route::post('/package-detail', [PackageController::class, 'detailStore'])->name('admin.package_detail.store');
 });
