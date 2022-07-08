@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -24,17 +24,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if (auth()->user()->role_as==1) {
+        if (auth()->user()->role_as == 1) {
             return redirect()->route('admin.dashboard');
         }
-       
     }
 
     public function logout()
     {
-       session()->flush();
-       return redirect()->route('admin.dashboard');
-       
+        session()->flush();
+        return redirect()->route('welcome');
     }
 
     public function emailCheck()
@@ -42,3 +40,4 @@ class HomeController extends Controller
         return view('frontend.email');
     }
 }
+ 

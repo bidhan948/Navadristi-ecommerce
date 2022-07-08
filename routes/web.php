@@ -54,7 +54,7 @@ Auth::routes();
 
 Route::get('/emailCheck', [HomeController::class, 'emailCheck'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/', [FrontendController::class, 'index']);
+Route::get('/', [FrontendController::class, 'index'])->name('welcome');
 
 
 // About
@@ -107,7 +107,7 @@ Route::get('/subgallery/{id}', [FrontendController::class, 'subGallery'])->name(
 Route::prefix('admin')->middleware(['isAdmin'])->group(function () {
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-    Route::post('logout',[HomeController::class,'logout'])->name('logout');
+    Route::get('logout',[HomeController::class,'logout'])->name('logout');
     // About Info
     // slider
     Route::get('/slider', [SliderController::class, 'index'])->name('slider');
