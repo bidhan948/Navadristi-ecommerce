@@ -20,6 +20,18 @@
   </head>
 
   <body>
+
+
+
+    {{-- Social Media  --}}
+    {{-- <ul class="social_media">
+      <li><a class="social_item facebook" href="#"> </a></li>
+      <li><a class="social_item twitter" href="#"></a></li>
+      <li><a class="social_item instagram" href="#"></a></li>
+      <li><a class="social_item viber" href="#"></a></li>
+      <li><a class="social_item whatsup" href="#"></a></li>
+    </ul> --}}
+
 <div id="top_wrap">
   <div class="container">
     <div class="row">
