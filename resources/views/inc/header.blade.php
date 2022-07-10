@@ -20,7 +20,25 @@
   </head>
 
   <body>
-
+<div id="top_wrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 top_wrap_info">
+        <p> <i class="fa-solid fa-phone"></i> Call Us : <strong> 9862 633 964 </strong></p>
+      </div>
+      <div class="col-md-6 account">
+        <ul>
+          <li> <span class="user-icon"> <i class="fa-solid fa-user"></i> </span> My Account <span class="dropdown-arrow"> <i class="fa-solid fa-angle-down"></i></span> 
+            <ul>
+              <li><a href="{{ route('user.register') }}"> Login   </a></li>
+              <li><a href="{{ route('user.register') }}"> Register  </a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
  <!-- === header === -->
  <header>
     <div class="container">
@@ -53,7 +71,7 @@
               <i class="fa-regular fa-clock"></i>
             </div> -->
             <div class="info appointment">
-              <button class="my-2"><a href="{{ route('user.register') }}"> Register </a></button>
+              {{-- <button class="my-2"><a href="{{ route('user.register') }}"> Register </a></button> --}}
               <button><a href="{{ url('/appointment') }}"> Fix an Appointment </a></button>
             </div>
           </div>
