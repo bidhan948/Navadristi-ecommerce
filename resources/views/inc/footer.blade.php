@@ -92,12 +92,11 @@
         </div>
     </div>
     <!-- :: Scroll Up -->
-    <div class="scroll-up">
+    {{-- <div class="scroll-up">
         <a href="#page" class="move-section">
-            {{-- <i class="fas fa-angle-up"></i> --}}
             <i class="fa-solid fa-arrow-up-to-line"></i>
         </a>
-    </div>
+    </div> --}}
 
     <!-- Script Include -->
 

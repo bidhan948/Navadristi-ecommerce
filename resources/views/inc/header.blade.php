@@ -9,7 +9,6 @@
     <!-- Style Include  -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" >
-    {{-- <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}"> --}}
     
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
@@ -20,18 +19,14 @@
   </head>
 
   <body>
+    {{-- Loader --}}
+    <div class="loader">
+      <img src="{{ asset('images/preloader.gif') }}" alt="">
+    </div>
+    {{-- back to top  --}}
+    <button onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fa-solid fa-arrow-up"></i> </button>
 
-
-
-    {{-- Social Media  --}}
-    {{-- <ul class="social_media">
-      <li><a class="social_item facebook" href="#"> </a></li>
-      <li><a class="social_item twitter" href="#"></a></li>
-      <li><a class="social_item instagram" href="#"></a></li>
-      <li><a class="social_item viber" href="#"></a></li>
-      <li><a class="social_item whatsup" href="#"></a></li>
-    </ul> --}}
-
+    {{-- top wrap  --}}
 <div id="top_wrap">
   <div class="container">
     <div class="row">

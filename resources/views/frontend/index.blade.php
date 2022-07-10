@@ -34,7 +34,7 @@
               </div>
               <div class="col-md-6 text-end">
                   <div class="phone-n">
-                      <h4> +977 9862 633 964  </h4>
+                      <h4> (+977) 9862 633 964  </h4>
       <span> 24 Hours Emergency Services</span>
       </div>
               </div>
