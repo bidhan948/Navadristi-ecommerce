@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\File;
 class NewsController extends Controller
 {
     public function index(){
-        // dd("Hello");
         $news = News::all();
         // dd($news);
         $news = News::orderBy('created_at','DESC')->get();

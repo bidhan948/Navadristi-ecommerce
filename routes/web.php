@@ -97,9 +97,6 @@ Route::get('career/{id}', [FrontendController::class, 'careerDetail'])->name('ca
 
 Route::post('career', [FrontendController::class, 'job_apply'])->name('job-apply');
 
-
-
-
 Route::get('/gallery', [FrontendController::class, 'gallery'])->name('gallery');
 Route::get('/subgallery/{id}', [FrontendController::class, 'subGallery'])->name('sub-gallery');
 
@@ -197,9 +194,6 @@ Route::prefix('admin')->middleware(['isAdmin'])->group(function () {
     
     //position
     Route::resource('position', PositionController::class);
-
-
-
     // Message from 
     Route::get('/message', [MessageController::class, 'index'])->name('message');
     Route::get('/message/edit/{id}', [MessageController::class, 'edit'])->name('edit-message');

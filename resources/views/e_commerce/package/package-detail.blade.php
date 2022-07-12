@@ -149,9 +149,12 @@
                                         <td>{{ $key + 1 }}</td>
                                         <td>{{ $packageDetail->name }}</td>
                                         <td>{{ $packageDetail->Package->name }}</td>
-                                        <td>{{ '$'.$packageDetail->price }}</td>
+                                        <td>{{ '$' . $packageDetail->price }}</td>
                                         <td>{!! $packageDetail->description !!}</td>
-                                        <td></td>
+                                        <td><a href="{{ route('admin.package_detail.edit', $packageDetail) }}"
+                                                type="button"
+                                                class="btn btn-primary btn-rounded waves-effect waves-light mb-2 mr-2"><i
+                                                    class='bx bx-edit mr-1'></i> Edit packages </a></td>
                                     </tr>
                                 @endforeach
                             </tbody>

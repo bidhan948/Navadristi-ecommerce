@@ -67,6 +67,14 @@ class PackageController extends Controller
         return redirect()->back();
     }
 
+    public function detailEdit(package_detail $package_detail)
+    {
+        return view('e_commerce.package.edit_package_detail', [
+            'package_detail' => $package_detail,
+            'packages' => package::query()->get()
+        ]);
+    }
+
     public function packageList(): View
     {
         return view('e_commerce.package.package-list');
