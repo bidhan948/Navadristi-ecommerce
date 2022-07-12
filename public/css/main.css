@@ -1,14 +1,15 @@
 /* Google fonts */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&family=Roboto+Slab:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  font-family: "Roboto", sans-serif;
+html{
+  scroll-behavior: smooth;
+  font-family: "Rototo", sans-serif;
 }
 .w-30 {
   width: 30%;
@@ -22,7 +23,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .separator:before {
   content: "";
   width: 40px;
@@ -30,7 +30,6 @@ body {
   background: #1c317a;
   margin-right: 10px;
 }
-
 .separator:after {
   content: "";
   width: 40px;
@@ -38,7 +37,6 @@ body {
   background: #1c317a;
   margin-left: 10px;
 }
-
 .separator .dot {
   background: #d92726;
   width: 7px;
@@ -47,11 +45,9 @@ body {
   margin: 4px;
   display: inline-block;
 }
-
 .separator .dot:first-child {
   background: #263c80;
 }
-
 .separator .dot:last-child {
   background: #263c80;
 }
@@ -62,16 +58,10 @@ section {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1140px;
   }
 }
 
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
 /* ==================================================================
 ===================================================================== */
 .loader{
@@ -124,13 +114,71 @@ section {
   background-color: #555;
 }
 
+/* === Socail Icon === */
+ul.social_link{
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 10;
+  list-style: none;
+  padding: 0px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+ul.social_link li.social_item{
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  transition: transform .5s;
+  -webkit-transition: transform .5s;
+  -moz-transition: transform .5s;
+  -ms-transition: transform .5s;
+  -o-transition: transform .5s;
+  cursor: pointer;
+}
+ul.social_link li.social_item:hover a{
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+}
+ul.social_link li.social_item a{
+  text-decoration: none;
+  color: #eee;
+}
+ul.social_link li.facebook{
+  background: #4267B2;
+}
+ul.social_link li.twitter{
+  background: #1DA1F2;
+}
+ul.social_link li.instagram{
+  background: #833AB4;
+}
+ul.social_link li.viber{
+  background: #7360F2;
+}
+ul.social_link li.whatsapp{
+  background: #128C7E;
+}
+
 /* ==================================================================
     :: Top Wrap 
 ===================================================================== */
 #top_wrap{
   background: #f5f5f5;
   border-bottom: 1px solid #eee;
-  font-size: .9rem;
+  font-size: .86rem;
   /* padding: .5rem 0; */
 }
 #top_wrap .top_wrap_info{
@@ -160,7 +208,7 @@ section {
   cursor: pointer;
 }
 #top_wrap .account ul li{
-  padding: .5rem;
+  padding: .4rem;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -210,8 +258,8 @@ section {
 #top_wrap .account ul ul li a:hover{
   color: #2126ec;
 }
-/* ==== Header ======= */
 
+/* ==== Header ======= */
 header {
   padding: 5px 0;
   background: #ffff;
@@ -294,9 +342,7 @@ header .top_info .top_info_item .appointment button a:hover {
 
 /* ====== Nav ======= */
 
-
 nav {
-  /* z-index: 1; */
   position: relative;
   top: 0;
   left: 0;
@@ -304,9 +350,9 @@ nav {
   display: flex;
   align-items: center;
   background-color: #2126ec;
-  /* box-shadow: 0 5px 25px rgb(0 0 0 /20%); */
   padding: 0 100px;
   transition: 0.6s;
+  z-index: 2;
 }
 
 nav .navigation {
@@ -328,7 +374,7 @@ nav .navigation .menu {
 }
 
 .menu-item > a {
-  color: #cfd7e9;
+  color: #eee;
   font-size: 1rem;
   text-decoration: none;
   padding: 16px 20px;
@@ -390,64 +436,6 @@ nav .navigation .menu {
 
 .menu-item .sub-menu .sub-item:last-child:hover {
   border-radius: 0 0 8px 8px;
-}
-
-/* === Socail Icon === */
-ul.social_link{
-  position: fixed;
-  top: 50%;
-  left: 0;
-  z-index: 10;
-  list-style: none;
-  padding: 0px;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-}
-
-ul.social_link li.social_item{
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-  transition: transform .5s;
-  -webkit-transition: transform .5s;
-  -moz-transition: transform .5s;
-  -ms-transition: transform .5s;
-  -o-transition: transform .5s;
-  cursor: pointer;
-}
-ul.social_link li.social_item:hover a{
-  transform: scale(1.3);
-  -webkit-transform: scale(1.3);
-  -moz-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  -o-transform: scale(1.3);
-}
-ul.social_link li.social_item a{
-  text-decoration: none;
-  color: #eee;
-}
-ul.social_link li.facebook{
-  background: #4267B2;
-}
-ul.social_link li.twitter{
-  background: #1DA1F2;
-}
-ul.social_link li.instagram{
-  background: #833AB4;
-}
-ul.social_link li.viber{
-  background: #7360F2;
-}
-ul.social_link li.whatsapp{
-  background: #128C7E;
 }
 
 
@@ -561,6 +549,8 @@ ul.social_link li.whatsapp{
   display: flex;
   align-items: center;
   color: #eee;
+  position: relative;
+  z-index: 1;
 }
 #banner .item .banner_text {
   color: #eee !important;
@@ -596,9 +586,7 @@ ul.social_link li.whatsapp{
   width: 50px;
   height: 50px;
   border-radius: 0px;
-  /*border: 1px solid #eee;
-  *//*box-shadow: 0 0 8px rgb(0 0 0 / 25%);
-  */-webkit-transform: translateY(-47%);
+  -webkit-transform: translateY(-47%);
   -moz-transform: translateY(-47%);
   -ms-transform: translateY(-47%);
   -o-transform: translateY(-47%);
@@ -626,9 +614,7 @@ ul.social_link li.whatsapp{
   color: #b0b0b0;
   width: 50px;
   height: 50px;
-  /*border: 1px solid #eee;
-  *//*box-shadow: 0 0 8px rgb(0 0 0 / 25%);
-  */-webkit-transform: translateY(-55%);
+  -webkit-transform: translateY(-55%);
   -moz-transform: translateY(-55%);
   -ms-transform: translateY(-55%);
   -o-transform: translateY(-55%);
@@ -685,25 +671,81 @@ ul.social_link li.whatsapp{
   -ms-transition: all 0.6s ease-in-out;
   -o-transition: all 0.6s ease-in-out;
 }
-
-/* Contact Us section  */
-.book_appointment{
-  color: #000;
+/* =============================================================
+  :: Book Appointment 
+================================================================ */
+.book_appointment {
+  padding: 30px;
+  background: #2126ec;
+  color: #f8f8f8;
+  font-family: 'Barlow Condensed', sans-serif;
+  margin-top: -10px;
+  position: relative;
+  z-index: 1;
 }
+
+.book_appointment::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg-eye.jpg) no-repeat left center;
+  background-size: 50%;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.appointment_info {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-left: 30px;
+  /* justify-content: space-between; */
+}
+
+.appointment_info h1 {
+  font-size: 2rem;
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appointment_info .phone-n {
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  /* font-family: "Poppins", sans-serif; */
+  margin-right: 30px;
+}
+
+
+
 .book_appointment .phone-n h4{
   font-size: 2.8rem;
+  letter-spacing: 3px;
+  word-spacing: 6px;
 }
 .book_appointment .phone-n span{
-  letter-spacing: 1px;
-  font-weight: 200;
+  letter-spacing: 2px;
+  word-spacing: 4px;
   font-size: 18px;
-  color: #bdbdbd;
+  color: #e5e5e5;
+  font-weight: 400;
 }
-/* ===== About Section ==== */
+/* ====================================================================
+    About Section 
+  ===================================================================== */
 #about__section {
-  padding: 5.6rem 0;
+  padding: 6rem 0;
   position: relative;
-  opacity: 1;
+  /* opacity: 1; */
+  background: #fff;
+  z-index: 1;
 }
 
 #about__section::after {
@@ -712,23 +754,21 @@ ul.social_link li.whatsapp{
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  background: url(../images/eye.png) no-repeat right center;
+  height: 100%;
+  background: url(../images/bg-eye.jpg) no-repeat right center;
   background-size: contain;
   background-attachment: fixed;
-  opacity: 0.2;
   z-index: -1;
+  opacity: .1;
 }
 
 .about_img {
   border: 5px solid #fff;
-  /* width: 330px; */
-  /* height: 400px;
-    max-width: 350px; */
   height: 100%;
+  width: 100%;
   background: #fff;
-  box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
-  margin-left: -100px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+  
 }
 .about_img img {
   width: 100%;
@@ -737,6 +777,7 @@ ul.social_link li.whatsapp{
 }
 .about_des {
   padding-left: 30px;
+  padding: 30px;
 }
 .about_des h6 {
   font-style: italic;
@@ -753,7 +794,7 @@ ul.social_link li.whatsapp{
   color: #777;
 }
 .about_des .cat {
-  padding: 10px 30px;
+  padding: 15px 30px;
   line-height: 25px;
   font-size: 16px;
   font-weight: 400;
@@ -825,22 +866,11 @@ ul.social_link li.whatsapp{
 
 .video-play-button img {
   position: relative;
-  z-index: 3;
+  z-index: 1;
   max-width: 100%;
   width: auto;
   height: auto;
 }
-
-/*.video-play-button span {*/
-/*  display: block;*/
-/*  position: relative;*/
-/*  z-index: 3;*/
-/*  width: 0;*/
-/*  height: 0;*/
-/*  border-left: 32px solid #fff;*/
-/*  border-top: 22px solid transparent;*/
-/*  border-bottom: 22px solid transparent;*/
-/*}*/
 
 @keyframes pulse-border {
   0% {
@@ -894,10 +924,9 @@ ul.social_link li.whatsapp{
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  /* width: 90%; */
-  /* height: auto; */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
 }
+
 
 /* === Message from Chairman === */
 #message_from {
@@ -1140,51 +1169,7 @@ ul.social_link li.whatsapp{
   color: #000000;
 }
 
-/* === Book Appointment === */
 
-.book_appointment {
-  padding: 30px;
-  background: #2b2fafe3;
-  color: #cbcbcb;
-  font-family: "Poppins", sans-serif;
-  margin-top: -10px;
-}
-
-
-.appointment_info {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  padding-left: 30px;
-  /* justify-content: space-between; */
-}
-
-.appointment_info h1 {
-  font-size: 2rem;
-  flex-grow: 2;
-}
-
-.appointment_info .phone-n {
-  margin-left: 5rem;
-  display: flex;
-  flex-direction: column;
-  font-size: 2rem;
-  letter-spacing: 3px;
-  font-family: "Poppins", sans-serif;
-  margin-right: 30px;
-}
-.appointment_info .phone-n h4 {
-  letter-spacing: 2px;
-}
-.appointment_info .phone-n span {
-  color: #a8a8a8;
-  font-size: 0.8rem;
-  letter-spacing: 0px;
-  font-style: normal;
-  font-weight: 200;
-  margin-top: -5px;
-  letter-spacing: 1px;
-}
 
 /*------/ === News & Events === /------*/
 
@@ -1367,7 +1352,29 @@ ul.social_link li.whatsapp{
 .view_all {
   margin-top: 30px;
 }
-
+.view_all a{
+  text-decoration: none;
+  border: 1px solid #2126ec;
+  padding: .7rem 2rem;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  color: #2126ec;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+}
+.view_all a i{
+  padding-left: 4px;
+}
+.view_all a:hover{
+  background: #2126ec;
+  color: #fff;
+}
 /* News & Event List  */
 
 .news_list .item {
@@ -1443,7 +1450,7 @@ ul.social_link li.whatsapp{
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 2;
+  z-index: 1;
   display: block;
   content: "";
   width: 0;
@@ -1505,7 +1512,7 @@ ul.social_link li.whatsapp{
   color: #777;
   position: relative;
   opacity: 1;
-  z-index: 9;
+  z-index: 1;
 }
 
 #testimonials h1 {
@@ -1593,6 +1600,8 @@ footer {
   /* background: #223645; */
   padding: 4rem 0;
   color: rgb(175, 175, 175);
+  position: relative;
+  z-index: 1;
 }
 
 footer .footer {
@@ -2211,15 +2220,7 @@ footer .footer p {
   margin-bottom: 20px;
 }
 
-/*.contact_sidebar h2.heading::after {*/
-/*    position: absolute;*/
-/*    content: "";*/
-/*    top: 32px;*/
-/*    left: 0;*/
-/*    width: 40px;*/
-/*    height: 1px;*/
-/*    background: red;*/
-/*}*/
+
 
 .contact_sidebar p {
   font-size: 0.8rem;
@@ -2451,6 +2452,9 @@ input#cv {
 }
 .services_item ul li {
   list-style: square;
+}
+.services_item .view_more_btn{
+  margin-top: 30px;
 }
 
 /* career CSS add */

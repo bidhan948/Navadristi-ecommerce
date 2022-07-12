@@ -72,6 +72,9 @@ Route::get('specialities', [FrontendController::class, 'specialities'])->name('s
 Route::get('/specialities/{id}', [FrontendController::class, 'specialitiesDetail'])->name('specialities-detail');
 
 
+// Our Team 
+Route::get('team', [FrontendController::class, 'team'])->name('our-team');
+
 
 // Doctor Route
 Route::get('doctors', [FrontendController::class, 'doctors'])->name('doctors');

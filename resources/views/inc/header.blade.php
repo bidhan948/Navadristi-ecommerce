@@ -14,10 +14,9 @@
     <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     {{-- Magnific Pop CSs --}}
-  <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
 
   </head>
-
   <body>
     {{-- Loader --}}
     <div class="loader">
@@ -74,11 +73,8 @@
             </div>
           </div>
           <div class="top_info_item">
-            <!-- <div class="icon">
-              <i class="fa-regular fa-clock"></i>
-            </div> -->
+         
             <div class="info appointment">
-              {{-- <button class="my-2"><a href="{{ route('user.register') }}"> Register </a></button> --}}
               <button><a href="{{ url('/appointment') }}"> Fix an Appointment </a></button>
             </div>
           </div>

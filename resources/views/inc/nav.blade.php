@@ -9,10 +9,13 @@
             <a class="text-capitalize @yield('home')" href="{{ url('/') }}"> Home </a>
           </li>
           <li class="menu-item">
-            <a class="text-capitalize @yield('about') " href="{{ url('/about') }}"> About </a>
+            <a class="text-capitalize @yield('about') " href="{{ url('/about') }}"> About</a>
           </li>
           <li class="menu-item">
             <a class="text-capitalize @yield('service') " href="{{ url('/services') }}"> Services </a>
+          </li>
+          <li class="menu-item">
+            <a class="text-capitalize @yield('team') " href="{{ url('/team') }}"> Our Team </a>
           </li>
           <li class="menu-item">
             <a class="text-capitalize @yield('specialities')"  href="{{ url('/specialities') }}">

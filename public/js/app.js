@@ -80,8 +80,8 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".limit-about").each(function (i) {
     var len = $(this).text().trim().length;
-    if (len > 500) {
-      $(this).text($(this).text().substr(0, 500) + "...");
+    if (len > 400) {
+      $(this).text($(this).text().substr(0, 400) + "...");
     }
   });
 });
