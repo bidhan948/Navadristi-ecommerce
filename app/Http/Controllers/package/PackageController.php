@@ -9,7 +9,7 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-
+use App\Models\About;
 class PackageController extends Controller
 {
     public function index(): View
@@ -77,6 +77,8 @@ class PackageController extends Controller
 
     public function packageList(): View
     {
-        return view('e_commerce.package.package-list');
+        return view('e_commerce.package.package-list',[
+            'about'=> About::query()->get()
+        ]);
     }
 }

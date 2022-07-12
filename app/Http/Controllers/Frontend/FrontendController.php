@@ -72,6 +72,17 @@ class FrontendController extends Controller
         $about = About::query()->get();
         return view('frontend.about', ['board' => $board, 'team' => $team, 'about' => $about]);
     }
+    // Our Team 
+
+    public function team(){
+        // $news=News::query()->get();
+        $board = Directors::query()->get();
+        $about = About::query()->get();
+        $team = Team::query()->get();
+        $about = About::query()->get();
+        return view('frontend.our-team', ['board' => $board, 'team' => $team, 'about' => $about]);
+    }
+
     // Specialities 
     public function specialities()
     {
