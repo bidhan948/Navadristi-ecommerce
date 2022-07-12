@@ -179,7 +179,8 @@ ul.social_link li.whatsapp{
   background: #f5f5f5;
   border-bottom: 1px solid #eee;
   font-size: .86rem;
-  /* padding: .5rem 0; */
+  position: relative;
+  z-index: 2;
 }
 #top_wrap .top_wrap_info{
   color: #666;
@@ -233,7 +234,7 @@ ul.social_link li.whatsapp{
 #top_wrap .account ul ul{
   position: absolute;
   right: -10px;
-  top: 38px;
+  top: 36px;
   background: #f0f0f0;
   /* width: 200px; */
   min-width: 160px;
