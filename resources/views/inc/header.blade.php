@@ -36,7 +36,7 @@
         <ul>
           <li> <span class="user-icon"> <i class="fa-solid fa-user"></i> </span> My Account <span class="dropdown-arrow"> <i class="fa-solid fa-angle-down"></i></span> 
             <ul>
-              <li><a href="{{ route('user.register') }}"> Login   </a></li>
+              <li><a href="{{ route('login') }}"> Login   </a></li>
               <li><a href="{{ route('user.register') }}"> Register  </a></li>
             </ul>
           </li>

@@ -11,7 +11,7 @@ class package_detail extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['package_id', 'name', 'description', 'price', 'added_By'];
+    protected $fillable = ['package_id', 'name', 'description', 'price', 'added_By','token'];
 
     // over riding orm to insert user id by default
     protected static function booted()

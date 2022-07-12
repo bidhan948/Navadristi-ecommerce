@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\package;
 
+use App\Helper\EcommerceHelper;
 use App\Http\Controllers\Controller;
 use App\Models\e_commerce\package;
 use App\Models\e_commerce\package_detail;
@@ -10,6 +11,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Models\About;
+
 class PackageController extends Controller
 {
     public function index(): View
@@ -51,7 +53,7 @@ class PackageController extends Controller
         ]);
     }
 
-    public function detailStore(Request $request): RedirectResponse
+    public function detailStore(Request $request, EcommerceHelper $helper): RedirectResponse
     {
         $attribute = $request->validate(
             [
@@ -62,7 +64,7 @@ class PackageController extends Controller
             ]
         );
 
-        package_detail::create($attribute);
+        package_detail::create($attribute + ['token' => $helper->generateUniqueTokenForPackage()]);
         toast("Package detail added successfully", 'success');
         return redirect()->back();
     }
@@ -77,8 +79,9 @@ class PackageController extends Controller
 
     public function packageList(): View
     {
-        return view('e_commerce.package.package-list',[
-            'about'=> About::query()->get()
+        return view('e_commerce.package.package-list', [
+            'about' => About::query()->get(),
+            'packages' => package_detail::query()->with('Package')->latest()->get()
         ]);
     }
 }
