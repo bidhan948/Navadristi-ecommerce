@@ -10,7 +10,6 @@ window.addEventListener('load', function(){
 // Back to Top 
 var mybutton = document.getElementById("myBtn");
 
-
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -18,6 +17,23 @@ function scrollFunction() {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
+  }
+}
+
+// Fix on Scrolling
+window.onscroll = function(){
+  fixNav();
+}
+
+let navbar = document.querySelector("#nav");
+let sticky = navbar.offsetTop;
+
+function fixNav(){
+  if(window.pageYOffset > sticky ){
+    navbar.classList.add("sticky");
+  }
+  else{
+    navbar.classList.remove("sticky");
   }
 }
 

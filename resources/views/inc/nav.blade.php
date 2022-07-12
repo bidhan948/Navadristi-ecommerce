@@ -1,5 +1,5 @@
 <!-- === Nav === -->
-<nav>
+<nav id="nav">
     <div class="container">
       <div class="navigation">
         <ul class="menu">
